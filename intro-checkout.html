@@ -1,0 +1,852 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Drora - Bootstrap Restaurant Admin Dashboard HTML Template</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css">
+    <link href="assets/plugins/jquery-steps/css/jquery.steps.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b class="logo-abbr">D</b>
+                    <span class="brand-title"><b>Drora</b></span>
+                </a>
+            </div>
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="toggle-icon"><i class="icon-menu"></i></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">    
+            <div class="header-content clearfix">
+                <div class="header-left">
+                    <div class="input-group icons">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-transparent border-0" id="basic-addon1"><i class="icon-magnifier"></i></span>
+                        </div>
+                        <input type="search" class="border-0" placeholder="Search here">
+                        <div class="drop-down animated flipInX d-md-none">
+                            <form action="#">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix d-flex align-items-center">
+                        <li class="dropdown px-1 px-sm-3 c-pointer">
+                            <button type="button" class="btn show_cart" data-toggle="modal" data-target="#exampleModalLong">
+                                <span class="badge badge-success" id="cart_count"></span>
+                                <i class="mdi mdi-cart"></i>
+                            </button>
+                        </li>
+                        <li class="icons">
+                            <a href="dashboard-admin.html" class="btn btn-primary d-inline-block px-3 py-2 text-white h-auto"> Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Dashboard</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-speedometer"></i><span class="nav-text">Dashboard</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="index.html">Admin Overview</a></li>
+                            <li><a href="dashboard-customer.html">Custommer Overview</a></li>
+                            <li><a href="dashboard-employee.html">Employee Overview</a></li>
+                            <li><a href="intro-cart.html">Cart</a></li>
+                            <li><a href="intro-checkout.html">Checkout</a></li>
+                            <li><a href="restaurant-menus.html">Menus</a></li>
+                            <li><a href="restaurant-offers.html">Offer</a></li>
+
+                            <li><a href="restaurant-employees.html">Employees</a></li>
+                            <li><a href="restaurant-Custommer.html">Custommer</a></li>
+                            <li><a href="restaurant-order.html">Order</a></li>
+                            <li><a href="restaurant-packages.html">Packages</a></li>
+                            <li><a href="intro-wishlist.html">Wishlist</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <div class="breadcrumb-range-picker">
+                        <span><i class="icon-calender"></i></span>
+                        <span class="ml-1">August 08, 2017 - August 08, 2017</span>
+                    </div>
+                </div>
+                <div class="col p-md-0 justify-content-end d-flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Components</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="container-fluid">
+                <div class="row justify-content-between">
+                    <div class="col-12 text-left">
+                        <h2 class="page-heading">Checkout</h2>
+                        <p class="mb-0"> Your restaurent admin Dashboard</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-xxl-8 col-lg-8">
+                        <form action="#" id="step-form-horizontal" class="step-form-horizontal order_checkout_form">
+                            <div>
+                                <h4>Account Information</h4>
+                                <section>
+                                    <h4 class="mb-4">Account Information</h4>
+                                    <div class="row">
+                                        <div class="col-12 mb-5 justify-content-center align-items-center d-flex">
+                                            <div class="user_identity text-center">
+                                                <img src="assets/images/avatar/1.jpg" alt="">
+                                                <p class="mb-0 mt-3">Checkout as</p>
+                                                <h5 class="mb-3">John Doe</h5>
+                                                <strong class="d-block text-muted">
+                                                    <a href="">Switch Account?</a>
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Name*</label>
+                                                        <input type="text" class="form-control" value="John Doe">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Email*</label>
+                                                        <input type="text" class="form-control" value="johndoe@mail.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Userame*</label>
+                                                        <input type="text" class="form-control" value="johndoe12">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Password*</label>
+                                                        <input type="password" class="form-control" value="**********">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <h4>Shipping Address</h4>
+                                <section>
+                                    <h4 class="mb-4">Shipping Address</h4>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="shipping_methods">
+                                                <div>
+                                                    <input type="radio" id="postal_delivery" checked="" name="shipping_method_select">
+                                                    <label class="shipping-method" for="postal_delivery">
+                                                        <span class="icon">
+                                                            <i class="mdi mdi-email"></i>
+                                                        </span>
+                                                        <span class="name">Postal</span>
+                                                        <span class="price animated tada">$12</span>
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" name="shipping_method_select" id="manual_delivery">
+                                                    <label class="shipping-method" for="manual_delivery">
+                                                        <span class="icon">
+                                                            <i class="mdi mdi-car-pickup"></i>
+                                                        </span>
+                                                        <span class="name">Delivery</span>
+                                                        <span class="price animated tada">$12</span>
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" name="shipping_method_select" id="drone_delivery">
+                                                    <label class="shipping-method" for="drone_delivery">
+                                                        <span class="icon">
+                                                            <i class="mdi mdi-drone"></i>
+                                                        </span>
+                                                        <span class="name">Drone</span>
+                                                        <span class="price animated tada">$12</span>
+                                                    </label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" name="shipping_method_select" id="air_delivery">
+                                                    <label class="shipping-method" for="air_delivery">
+                                                        <span class="icon">
+                                                            <i class="mdi mdi-rocket"></i>
+                                                        </span>
+                                                        <span class="name">Super</span>
+                                                        <span class="price animated tada">$12</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label>Address</label>
+                                                        <input type="text" class="form-control" value="23, Block C2">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label>Street</label>
+                                                        <input type="text" class="form-control" value="Church Street">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label>Postal Code</label>
+                                                        <input type="text" class="form-control" value="100065">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label>City</label>
+                                                        <input type="text" class="form-control" value="New York">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label>State</label>
+                                                        <input type="text" class="form-control" value="NYC">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label>Region</label>
+                                                        <select name="" id="" class="selectpicker d-block w-100">
+                                                            <option value="">Afganistan</option>
+                                                            <option value="">Bangladesh</option>
+                                                            <option value="">USA</option>
+                                                            <option value="">UK</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <h4>Varification</h4>
+                                <section>
+                                    <h4 class="mb-4">Varification</h4>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="table-responsive mt-3 order_varification">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Product</th>
+                                                            <th>Shipping</th>
+                                                            <th>QTY</th>
+                                                            <th>Price</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Pizza</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Delivery</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-primary font-weight-bold">22.5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Chicken Roll</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Postal</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>4</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-primary font-weight-bold">34.5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Chicken Fry</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Drone</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>2</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-primary font-weight-bold">50.9</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>Fried Rice</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>Super</div>
+                                                        </td>
+                                                        <td>
+                                                            <div>1</div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-primary font-weight-bold">15.5</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <h5>4 Products ordered</h5>
+                                                        </td>
+                                                        <td>
+                                                            <h5>Order Total: </h5>
+                                                        </td>
+                                                        <td>
+                                                            <h5>104.5</h5>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <h4>Payment</h4>
+                                <section>
+                                    <h4 class="mb-4">Payment</h4>
+                                    <div class="row payment_methods">
+                                        <div class="col-6">
+                                            <div class="card payment_method" data-method="paypal_transaction">
+                                                <div class="card-body d-flex flex-column align-items-center">
+                                                    <span class="icon">
+                                                        <i class="fa fa-paypal"></i>
+                                                    </span>
+                                                    <span class="name">Paypal</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card payment_method" data-method="bank_transfer_transaction">
+                                                <div class="card-body d-flex flex-column align-items-center">
+                                                    <span class="icon">
+                                                        <i class="fa fa-bank"></i>
+                                                    </span>
+                                                    <span class="name">Bank Transfer</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card payment_method" data-method="credit_card_transaction">
+                                                <div class="card-body d-flex flex-column align-items-center">
+                                                    <span class="icon">
+                                                        <i class="fa fa-credit-card"></i>
+                                                    </span>
+                                                    <span class="name">Credit Card</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card payment_method" data-method="cash_transaction">
+                                                <div class="card-body d-flex flex-column align-items-center">
+                                                    <span class="icon">
+                                                        <i class="fa fa-money"></i>
+                                                    </span>
+                                                    <span class="name">Cash</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row fadeInUp animated payment_method_form" id="paypal_transaction">
+                                        <div class="col-12 justify-content-center align-items-center d-flex">
+                                            <div class="total_bill_count mb-3">
+                                                <h4>$706,48 + $145,00 (VAT) = $751,48</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-2">
+                                                <img src="assets/images/svg/paypal.svg" alt="paypal logo">
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Email</label>
+                                                        <input type="email" class="form-control" placeholder="Enter your Paypal E-mail">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Password</label>
+                                                        <input type="password" class="form-control" placeholder="Enter your Paypal password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="go__back text-center">
+                                                <button class="btn btn-info payment_method_form_back">Go Back</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row fadeInUp animated payment_method_form" id="bank_transfer_transaction">
+                                        <div class="col-12 text-center">
+                                            <div class="mb-2">
+                                                <img height="50" src="assets/images/svg/bank.svg" alt="paypal logo">
+                                            </div>
+                                            <div class="mb-3">
+                                                <span class="d-block">Inam Ur Rehman Sales LTD. </span>
+                                                <span class="d-block">HSBC NY</span>
+                                                <span class="d-block">BIC: GENODEF1VBD</span>
+                                                <span class="d-block">IBAN: DE 0750 8900 0000 0175 7814</span>
+                                            </div>
+                                            <h4>$706,48 + $145,00 (VAT) = $751,48</h4>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="go__back text-center">
+                                                <button class="btn btn-info payment_method_form_back">Go Back</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row fadeInUp animated payment_method_form" id="credit_card_transaction">
+                                        <div class="col-12 justify-content-center align-items-center d-flex">
+                                            <div class="total_bill_count mb-3">
+                                                <h4>$706,48 + $145,00 (VAT) = $751,48</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="credit_card_icon mb-2">
+                                                <span class="icon">
+                                                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Card Number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Full Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="MM/YY">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="CVC">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="go__back text-center">
+                                                <button class="btn btn-info payment_method_form_back">Go Back</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row fadeInUp animated payment_method_form justify-content-center" id="cash_transaction">
+                                        <div class="col-12 justify-content-center align-items-center d-flex">
+                                            <div class="total_bill_count mb-3">
+                                                <h4>$706,48 + $145,00 (VAT) = $751,48</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-8 justify-content-center">
+                                            <div class="cash_icon mb-2">
+                                                <span class="icon">
+                                                    <i class="fa fa-money"></i>
+                                                </span>
+                                            </div>
+                                            <p class="text-center">Come by at one of our nearest stores and pay your order in cash if you wish to. The order will remain pending until we receive the payment.</p>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <div class="go__back text-center">
+                                                <button class="btn btn-info payment_method_form_back">Go Back</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed & Developed by <a href="https://themeforest.net/user/Inam Ur Rehman" target="_blank">Inam Ur Rehman</a> 2023</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Cart Items</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="shopping_cart">
+                            <div>
+                                <ul class="d-flex">
+                                    <li class="item_name font-weight-bold">Product Name</li>
+                                    <li class="number_input font-weight-bold">Quantity</li>
+                                    <li class="item_price font-weight-bold pl-2">Price</li>
+                                    <li class="item_bill font-weight-bold">Total</li>
+                                    <li class="remove_button font-weight-bold">Delete</li>
+                                </ul>
+                            </div>
+                            <div id="shopping_cart_wrapper">
+                                <ul class="list-group" id="shopping_cart"></ul>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between pb-2 pt-5">
+                            <h5 class="m-0">Subtotal</h5>
+                            <div id="subtotal_price"></div>
+                        </div>
+                        <div class="d-flex justify-content-between py-2">
+                            <h5 class="m-0">VAT (15%)</h5>
+                            <div id="vat_count"></div>
+                        </div>
+                        <div class="d-flex justify-content-between py-2 border-top">
+                            <h5 class="m-0">Total</h5>
+                            <div id="total_price" class="font-weight-bold"></div>
+                        </div>
+                        <div class="py-2 select_order_place">
+                            <select name="" id="" class="selectpicker w-100">
+                                <option value="">Order In Store</option>
+                                <option value="">Order In Home</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <a href="intro-checkout.html" class="btn btn-success">Checkout</a>
+                            <button class="btn btn-danger" id="clear_cart">Clear Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--**********************************
+            Right sidebar start
+        ***********************************-->
+        <div class="sidebar-right">
+
+            <div class="sidebar-right-inner">
+                <div class="admin-settings">
+                    <h4>Pick your style</h4>
+                    <div>
+                        <p>Background</p>
+                        <select class="form-control" name="theme_version" id="theme_version">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Layout</p>
+                        <select class="form-control" name="theme_layout" id="theme_layout">
+                            <option value="vertical">Vertical</option>
+                            <option value="horizontal">Horizontal</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Sidebar</p>
+                        <select class="form-control" name="sidebar_style" id="sidebar_style">
+                            <option value="full">Full</option>
+                            <option value="mini">Mini</option>
+                            <option value="compact">Compact</option>
+                            <option value="overlay">Overlay</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Sidebar position</p>
+                        <select class="form-control" name="sidebar_position" id="sidebar_position">
+                            <option value="static">Static</option>
+                            <option value="fixed">Fixed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Header position</p>
+                        <select class="form-control" name="header_position" id="header_position">
+                            <option value="static">Static</option>
+                            <option value="fixed">Fixed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Container</p>
+                        <select class="form-control" name="container_layout" id="container_layout">
+                            <option value="wide">Wide</option>
+                            <option value="boxed">Boxed</option>
+                            <option value="wide-boxed">Wide Boxed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Direction</p>
+                        <select class="form-control" name="theme_direction" id="theme_direction">
+                            <option value="ltr">LTR</option>
+                            <option value="rtl">RTL</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Navigation Header</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_1" class="filled-in chk-col-primary" id="nav_header_bg_1">
+                                <label for="nav_header_bg_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_2" class="filled-in chk-col-primary" id="nav_header_bg_2">
+                                <label for="nav_header_bg_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_3" class="filled-in chk-col-primary" id="nav_header_bg_3">
+                                <label for="nav_header_bg_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_4" class="filled-in chk-col-primary" id="nav_header_bg_4">
+                                <label for="nav_header_bg_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_5" class="filled-in chk-col-primary" id="nav_header_bg_5">
+                                <label for="nav_header_bg_5"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_6" class="filled-in chk-col-primary" id="nav_header_bg_6">
+                                <label for="nav_header_bg_6"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_7" class="filled-in chk-col-primary" id="nav_header_bg_7">
+                                <label for="nav_header_bg_7"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_8" class="filled-in chk-col-primary" id="nav_header_bg_8">
+                                <label for="nav_header_bg_8"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_9" class="filled-in chk-col-primary" id="nav_header_bg_9">
+                                <label for="nav_header_bg_9"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="navigation_header" value="color_10" class="filled-in chk-col-primary" id="nav_header_bg_10">
+                                <label for="nav_header_bg_10"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Header</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_1" class="filled-in chk-col-primary" id="header_bg_1">
+                                <label for="header_bg_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_2" class="filled-in chk-col-primary" id="header_bg_2">
+                                <label for="header_bg_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_3" class="filled-in chk-col-primary" id="header_bg_3">
+                                <label for="header_bg_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_4" class="filled-in chk-col-primary" id="header_bg_4">
+                                <label for="header_bg_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_5" class="filled-in chk-col-primary" id="header_bg_5">
+                                <label for="header_bg_5"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_6" class="filled-in chk-col-primary" id="header_bg_6">
+                                <label for="header_bg_6"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_7" class="filled-in chk-col-primary" id="header_bg_7">
+                                <label for="header_bg_7"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_8" class="filled-in chk-col-primary" id="header_bg_8">
+                                <label for="header_bg_8"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_9" class="filled-in chk-col-primary" id="header_bg_9">
+                                <label for="header_bg_9"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="header_bg" value="color_10" class="filled-in chk-col-primary" id="header_bg_10">
+                                <label for="header_bg_10"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sidebar</p>
+                        <div>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_1" class="filled-in chk-col-primary" id="sidebar_bg_1">
+                                <label for="sidebar_bg_1"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_2" class="filled-in chk-col-primary" id="sidebar_bg_2">
+                                <label for="sidebar_bg_2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_3" class="filled-in chk-col-primary" id="sidebar_bg_3">
+                                <label for="sidebar_bg_3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_4" class="filled-in chk-col-primary" id="sidebar_bg_4">
+                                <label for="sidebar_bg_4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_5" class="filled-in chk-col-primary" id="sidebar_bg_5">
+                                <label for="sidebar_bg_5"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_6" class="filled-in chk-col-primary" id="sidebar_bg_6">
+                                <label for="sidebar_bg_6"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_7" class="filled-in chk-col-primary" id="sidebar_bg_7">
+                                <label for="sidebar_bg_7"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_8" class="filled-in chk-col-primary" id="sidebar_bg_8">
+                                <label for="sidebar_bg_8"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_9" class="filled-in chk-col-primary" id="sidebar_bg_9">
+                                <label for="sidebar_bg_9"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="sidebar_bg" value="color_10" class="filled-in chk-col-primary" id="sidebar_bg_10">
+                                <label for="sidebar_bg_10"></label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Right sidebar end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="assets/plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/quixnav.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+    
+    <script src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    <script src="assets/plugins/jquery-steps/build/jquery.steps.min.js"></script>
+    <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/dashboard/checkout-script.js"></script>
+    
+    
+    <script src="assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+    <script src="js/dashboard/intro-index.js"></script>
+</body>
+
+</html>
